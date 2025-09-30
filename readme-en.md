@@ -43,34 +43,21 @@ openNAMU is protected by [BSD 3-Clause License](./LICNESE). Please refer to the 
 
 ---
 
-## **영어 버전 (README_en.md)**
-
-```markdown
-
----
-
-
----
-
-## **영어 버전 (README_en.md)**
-
-```markdown
 # Project Name (e.g., SoongilWiki)
 
 ## Overview
-This project is a Python-based web wiki system using the [OpenNAMU](https://opennamu.org/) engine.  
-OpenNAMU is an open-source wiki engine that allows anyone to easily create and manage wikis.
+This project is a Python-based web wiki system built on the [OpenNAMU](https://opennamu.org/) engine.  
+OpenNAMU is an open-source wiki engine that makes it easy for anyone to create and manage wikis.
 
-The project can be developed and tested on Replit, but actual deployment will be on an external server such as a personal VPS.
+The project can be developed and tested on Replit, but the final deployment will be on an external server, such as a personal VPS.
 
 ## Development Environment
 - Python 3.x
-- Required packages: flask, sqlite3, other OpenNAMU-related packages
+- Required packages: flask, sqlite3, and other OpenNAMU-related dependencies
 - Database: SQLite
 
-## Installation and Running (Replit)
+## Installation and Running (on Replit)
 1. Import this project into Replit
-2. Install packages:  
+2. Install required packages:  
    ```bash
    pip install -r requirements.txt
-
