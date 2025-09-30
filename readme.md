@@ -50,3 +50,23 @@
  * [기여자 목록](https://github.com/openNAMU/openNAMU/graphs/contributors)
  * [예전 히스토리 1](https://github.com/openNAMU/openNAMU-Backup)
  * [예전 히스토리 2](https://github.com/openNAMU/Discard-openNAMU-Legacy)
+
+# 프로젝트 이름 (예: 숭일위키)
+
+## 개요
+이 프로젝트는 Python 기반의 웹 위키 시스템으로, [OpenNAMU](https://opennamu.org/) 엔진을 사용합니다.  
+OpenNAMU는 누구나 쉽게 위키를 만들고 관리할 수 있는 오픈소스 위키 엔진입니다.
+
+Replit에서 개발 및 테스트할 수 있으며, 실제 서비스 배포는 개인 VPS 등 외부 서버에서 진행할 예정입니다.
+
+## 개발 환경
+- Python 3.x
+- 필요한 패키지: flask, sqlite3, 기타 OpenNAMU 관련 패키지
+- 데이터베이스: SQLite
+
+## 설치 및 실행 (Replit 기준)
+1. Replit에서 이 프로젝트를 Import
+2. 패키지 설치:  
+   ```bash
+   pip install -r requirements.txt
+
