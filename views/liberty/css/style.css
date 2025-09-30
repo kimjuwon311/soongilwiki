@@ -274,3 +274,25 @@ th[rowspan], td[rowspan] {
 table {
     background-color: transparent;
 }
+
+.bottom-left-logo {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.bottom-left-logo a {
+    display: block;
+    text-decoration: none;
+}
+
+.bottom-left-logo img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.bottom-left-logo img:hover {
+    transform: scale(1.1);
+}
