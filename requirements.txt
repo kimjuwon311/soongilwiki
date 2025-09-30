@@ -13,3 +13,12 @@ diff-match-patch
 pillow
 
 pymysql
+aiohttp
+asyncio
+diff-match-patch
+flask[async]
+orjson
+pillow
+pymysql
+requests
+waitress
