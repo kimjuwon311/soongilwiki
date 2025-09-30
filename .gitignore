@@ -1,5 +1,6 @@
 __pycache__
 /app_session
+.pythonlibs
 
 data/set.json
 data/mysql.json
