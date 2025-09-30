@@ -26,9 +26,20 @@ robots.txt
 custom.py
 404.html
 
-
 route_go/bin/*
 !route_go/bin/test
 
 sitemap.xml
 sitemap_0.xml
+
+# Replit specific files
+.replit
+replit.nix
+.pythonlibs/
+
+# Attached assets (user uploads, backups)
+attached_assets/
+
+# Data directory with uploads and temp files
+data/images/
+data/temp.db

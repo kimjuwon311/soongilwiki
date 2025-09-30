@@ -42,10 +42,6 @@ externalPort = 3001
 localPort = 5000
 externalPort = 80
 
-[[ports]]
-localPort = 42381
-externalPort = 3000
-
 [deployment]
 deploymentTarget = "vm"
 run = ["bash", "-c", "NAMU_HOST=0.0.0.0 NAMU_PORT=5000 NAMU_GOLANGPORT=3001 NAMU_LANG=ko-KR NAMU_MARKUP=namumark NAMU_ENCRYPT=sha3 python app.py"]
