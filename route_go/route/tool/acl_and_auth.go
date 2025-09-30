@@ -1,10 +1,10 @@
 package tool
 
 import (
-	"database/sql"
-	"strconv"
-	"strings"
-	"time"
+        "database/sql"
+        "strconv"
+        "strings"
+        "time"
      "log"
 )
 
@@ -83,8 +83,10 @@ func Get_user_auth(db *sql.DB, ip string) string {
 }
 
 func Get_auth_group_info(db *sql.DB, auth string) map[string]bool {
-    rows := Query_DB(db, DB_change("select acl from alist where name = ?"), auth)
-
+    rows, err := Query_DB(db, DB_change("select acl from alist where name = ?"), auth)
+    if err != nil {
+        return map[string]bool{"nothing": true}
+    }
     
     defer rows.Close()
 

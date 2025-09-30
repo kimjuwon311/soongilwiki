@@ -1,20 +1,21 @@
 package tool
 
 import (
-	"bytes"
-	"crypto/sha256"
-	"database/sql"
-	"encoding/hex"
-	"html"
-	"html/template"
-	"net/url"
-	"os"
-	"strconv"
-	"strings"
-	"time"
+        "bytes"
+        "crypto/sha256"
+        "database/sql"
+        "encoding/hex"
+        "html"
+        "html/template"
+        "log"
+        "net/url"
+        "os"
+        "strconv"
+        "strings"
+        "time"
 
-	"github.com/CloudyKit/jet/v6"
-	"github.com/gin-gonic/gin"
+        "github.com/CloudyKit/jet/v6"
+        "github.com/gin-gonic/gin"
 )
 
 func Sha224(data string) string {

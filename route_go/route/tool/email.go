@@ -1,11 +1,10 @@
 package tool
 
 import (
-	"crypto/tls"
-	"database/sql"
-	"fmt"
-	"net/smtp"
-    "log"
+        "crypto/tls"
+        "database/sql"
+        "fmt"
+        "net/smtp"
 )
 
 func Send_email(db *sql.DB, ip string, recipient string, title string, body string) error {
