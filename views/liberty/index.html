@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="{{'language_tag'|load_lang}}">
+    <head>
+        <script src="/views/liberty/js/skin_set_do.js.cache_v2"></script>
+
+        <meta charset="utf-8">
+        {% if imp[3][0] != 0 %}
+            <title>{{imp[0]}} {{imp[3][0]}} - {{imp[1][0]}}</title>
+        {% else %}
+            <title>{{imp[0]}} - {{imp[1][0]}}</title>
+        {% endif %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" integrity="sha512-DD6Lm09YDHzhW3K4eLJ9Y7sFrBwtCF+KuSWOLYFqKsZ6RX4ifCu9vWqM4R+Uy++aBWe6wD4csgQRzGKp5vP6tg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0-alpha.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/themes/base/jquery-ui.min.css" integrity="sha512-8PjjnSP8Bw/WNPxF6wkklW6qlQJdWJc/3w/ZQPvZ/1bjVDkrrSqLe9mfPYrMxtnzsXFPc434+u4FHLnLjXTSsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/views/liberty/css/default.css.cache_v2">
+        <link rel="stylesheet" href="/views/liberty/css/default_mobile.css.cache_v1">
+        {{imp[3][3]|safe}}
+        <link rel="stylesheet" href="/views/liberty/css/style.css.cache_v10">
+        {% if request.cookies.get('main_css_darkmode', '') == '1' %}
+            {{imp[3][5]|safe}}
+            <link rel="stylesheet" href="/views/liberty/css/dark.css.cache_v6">
+        {% endif %}
+        <link href="https://fonts.googleapis.com/css?family=Dokdo|Gaegu|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Noto+Serif+KR|Noto+Sans+KR&amp;display=swap&amp;subset=korean" rel="stylesheet">
+        <link rel="shortcut icon" href="/views/main_css/file/favicon.ico">
+        
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js" integrity="sha512-t0ovA8ZOiDuaNN5DaQQpMn37SqIwp6avyoFQoW49hOmEYSRf8mTCY2jZkEVizDT+IZ9x+VHTZPpcaMA5t2d2zQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js" integrity="sha512-Ww1y9OuQ2kehgVWSD/3nhgfrb424O3802QYP/A5gPXoM4+rRjiKrjHdGxQKrMGQykmsJ/86oGdHszfcVgUr4hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        
+        <script defer src="/views/liberty/js/layout.js.cache_v3"></script>
+        <script defer src="/views/liberty/js/skin_set.js.cache_v8"></script>
+        {{imp[1][5]|safe}}
+        {{imp[2][3]|safe}}
+        {% if imp[3][0] != 0 %}
+            <meta name="title" content="{{imp[0]}}{{imp[3][0]}} - {{imp[1][0]}}">
+        {% else %}
+            <meta name="title" content="{{imp[0]}} - {{imp[1][0]}}">
+        {% endif %}
+        <meta name="keywords" content="{{imp[0]}}">
+        <meta name="description" content="{{imp[3][6]}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="Liberty">
+        <div class="nav-wrapper navbar-fixed-top">
+            <nav class="navbar navbar-dark">
+                <a class="navbar-brand" href="/">{{imp[1][4]|safe}}</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/recent_changes"><span class="fa fa-refresh"></span><span class="hide-title">{{'recent_change'|load_lang}}</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/recent_discuss"><span class="fa fa-comments"></span><span class="hide-title">{{'recent_discussion'|load_lang}}</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bbs/main"><span class="fa fa-users"></span><span class="hide-title">{{'bbs_main'|load_lang}}</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" data-toggle="dropdown" aria-expanded="false">
+                            <span class="fa fa-wrench"></span><span class="hide-title">{{'tool'|load_lang}}</span>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="/vote"><span class="fa fa-check-square-o"></span><span class="hide-title">{{'vote'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/random"><span class="fa fa-random"></span><span class="hide-title">{{'random'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/change/skin_set"><span class="fa fa-cog"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/upload"><span class="fa fa-upload"></span><span class="hide-title">{{'upload'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/other"><span class="fa fa-cogs"></span><span class="hide-title">{{'other_tool'|load_lang}}</span></a>
+                            {% if imp[2][9] != '0' %}
+                                <a class="dropdown-item" href="/manager"><span class="fa fa-folder"></span><span class="hide-title">{{'admin_tool'|load_lang}}</span></a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% if imp[1][6] != '' %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" data-toggle="dropdown" aria-expanded="false">
+                                <span class="fa fa-plus-circle"></span><span class="hide-title">{{'added_menu'|load_lang}}</span>
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                                {% for added_top_menu in imp[1][6] %}
+                                    <a class="dropdown-item" href="{{added_top_menu[1]}}">
+                                        <span class="fa fa-plus"></span>
+                                        <span class="hide-title">{{added_top_menu[0]}}</span>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </li>
+                    {% endif %}
+                </ul>
+                <div class="navbar-login">
+                    <div class="dropdown login-menu">
+                        <a type="button" id="login-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                            {% if imp[2][2] == 0 %}
+                                <span class="fa fa-sign-in" style="padding: 0; padding-top: 0.35rem;"></span>
+                            {% elif imp[2][4] != '' %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=identicon">
+                            {% else %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&f=y">
+                            {% endif %}
+                        </a>
+                        <div aria-labelledby="login-menu" class="dropdown-menu dropdown-menu-right login-dropdown-menu">
+                            <a href="/user" class="dropdown-item">
+                                {% if imp[2][2] == 1 %}
+                                    <b>{{imp[2][5]}}</b>
+                                {% else %}
+                                    <b>{{imp[2][10]}}</b>
+                                {% endif %}
+                                <br>
+                                {% if imp[2][2] == 1 %}
+                                    {% if imp[2][6] == '1' %}
+                                        {% if 'owner' in imp[2][9] %}
+                                            {{'owner'|load_lang}}
+                                        {% else %}
+                                            {{'admin'|load_lang}}
+                                        {% endif %}
+                                    {% else %}
+                                        {{'member'|load_lang}}
+                                    {% endif %}
+                                {% else %}
+                                    {{'ip'|load_lang}}
+                                {% endif %}
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/user" class="dropdown-item">{{'user_tool'|load_lang}}</a>
+                            <a href="/change" class="dropdown-item">{{'user_setting'|load_lang}}</a>
+                            <div class="dropdown-divider"></div>
+                            {% if imp[2][2] == 1 %}
+                                <a href="/alarm" class="dropdown-item">{{'alarm'|load_lang}} ({{imp[2][8]}})</a>
+                                <a href="/watch_list" class="dropdown-item">{{'watchlist'|load_lang}}</a>
+                                <a href="/star_doc" class="dropdown-item">{{'star_doc'|load_lang}}</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="/logout" class="dropdown-item">{{'logout'|load_lang}}</a>
+                            {% else %}
+                                <a href="/login" class="dropdown-item">{{'login'|load_lang}}</a>
+                                <a href="/register" class="dropdown-item">{{'register'|load_lang}}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <form method="post" action="/search" id="searchform" class="form-inline">
+                    <div class="input-group">
+                        <input type="search" name="search" placeholder="{{'search'|load_lang}}" accesskey="f" class="form-control" id="searchInput" autocomplete="off">
+                        <span class="input-group-btn">
+                            <button formaction="/goto" name="go" value="view" id="searchGoButton" class="btn btn-secondary"><span class="fa fa-eye"></span></button>
+                            <button name="fulltext" value="search" id="searchSearchButton" class="btn btn-secondary"><span class="fa fa-search"></span></button>
+                        </span>
+                    </div>
+                </form>
+            </nav>
+        </div>
+        <div class="scroll-buttons">
+            <a class="scroll-toc" href="#toc" id="scroll-button-toc"><i class="fa fa-list-alt" aria-hidden="true"></i></a><!--
+         --><a class="scroll-button" href="#" id="scroll-button-left"><i class="fa fa-arrow-up" aria-hidden="true"></i></a><!--
+         --><a class="scroll-bottom" href="#powered" id="scroll-button-right"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <div class="content-wrapper">
+            <div class="liberty-sidebar">
+                <div class="liberty-right-fixed">
+                    <div class="live-recent">
+                        <div class="live-recent-header">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a href="javascript:liberty_side_load('A');" class="nav-link active" id="liberty-recent-tab1">{{'recent_change'|load_lang}}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:liberty_side_load('B');" class="nav-link" id="liberty-recent-tab2">{{'recent_discussion'|load_lang}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="live-recent-content">
+                            <ul class="live-recent-list" id="live-recent-list">
+                                {% for i in range(10) %}
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="live-recent-footer">
+                            <a id="liberty_recent_link" href="/recent_changes" title="{{'recent_change'|load_lang}}">
+                                <span class="label label-info">+</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid liberty-content">
+                <div class="liberty-content-header">
+                    {% if not menu == 0 %}
+                        <div class="content-tools">
+                            <div class="btn-group" role="group" aria-label="content-tools">
+                                {% for sub_d in menu %}
+                                    {% if loop.index > 5 %}
+                                        {% if loop.index == 6 %}
+                                            <button type="button" class="btn btn-secondary tools-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                <span class="caret"></span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                            {% set i = 0 %}
+                                        {% endif %}
+                                        <a class="dropdown-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                    {% else %}
+                                        {% if sub_d|length > 2 and sub_d[2] == 1 %}
+                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="topic_color">{{sub_d[1]}}</a>
+                                        {% else %}
+                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                        {% endif %}
+                                    {% endif %}
+                                    {% if not menu[loop.index] and loop.index > 5 %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="title">
+                        <h1 id="main_title">
+                            {{imp[0]}}
+                            {% if imp[3][0] != 0 %}
+                                <sub>{{imp[3][0]}}</sub>
+                            {% endif %}
+                        </h1>
+                        {% if imp[3][1] != 0 %}
+                            <span>{{'last_edit_time'|load_lang}} : {{imp[3][1]}} | {{'page_view'|load_lang}} : {{imp[3][7]}}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="liberty-content-main wiki-article">
+                    {{data|safe}}
+                </div>
+                <div class="liberty-footer" id="bottom">
+                    <p>
+                        {{imp[1][1]|safe}}
+                    </p>
+                    <div id="powered">
+                        <a href="https://github.com/openNAMU/openNAMU"><img src="/views/main_css/file/s_logo.png" width="100px"></a>
+                        <a href="https://librewiki.net/"><img src="/views/liberty/img/designedbylibre.png" width="100px"></a>
+                        <a href="http://soongil.gen.hs.kr/main/main.php"><img src="/views/liberty/img/Schoolemblem.png" width="50px"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
